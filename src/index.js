@@ -8,9 +8,11 @@ import Forecast from "./Forecast";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <App />
-    <Forecast />
+    <div className="index">
+      <Header />
+      <App />
+      <Forecast />
+    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );

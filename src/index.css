@@ -1,4 +1,4 @@
-.Container {
+.index {
   margin: 20px 25px;
   padding: 15px 20px;
   border: 1px solid #ff3366;
@@ -15,7 +15,7 @@ h1 {
   font-size: 100px;
 }
 h2 {
-  font-family: "Kavivanar", cursive;
+  font-family: "Zen Loop", cursive;
 }
 p {
   font-family: "Open Sans Condensed", sans-serif;
