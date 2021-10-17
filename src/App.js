@@ -3,6 +3,12 @@ import "./index.css";
 function App() {
   return (
     <div className="App">
+      <form id="find-city">
+        <input type="text" id="enter-city" placeholder="Enter City..." />
+        <br />
+        <input type="submit" id="search-button" value="Search" />
+        <input type="submit" id="location-button" value="Location" />
+      </form>
       <div className="row justify-content-center">
         <div className="col-3">
           <div className="card">
