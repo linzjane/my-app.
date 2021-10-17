@@ -8,12 +8,13 @@ export default function App() {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: "Today",
     });
   }
@@ -58,7 +59,7 @@ export default function App() {
             <div className="card">
               <div className="card-body" id="info">
                 <p className="card-text" id="today-condition">
-                  Condition: Sunny
+                  Condition: {weatherData.description}
                 </p>
                 <p className="card-text" id="today-humidity">
                   Humidity: {weatherData.humidity}%
@@ -75,7 +76,7 @@ export default function App() {
   } else {
     const apiKey = "779282a2feb268a8ab73225f96fab2da";
     let city = "London";
-    let apiUrl = `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }

@@ -9,6 +9,7 @@ import Forecast from "./Forecast";
 ReactDOM.render(
   <React.StrictMode>
     <div className="index">
+      <h1>Weather</h1>
       <App />
       <Forecast />
     </div>
