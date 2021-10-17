@@ -3,13 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./Header";
+
 import Forecast from "./Forecast";
 
 ReactDOM.render(
   <React.StrictMode>
     <div className="index">
-      <Header />
       <App />
       <Forecast />
     </div>

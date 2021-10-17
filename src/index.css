@@ -70,15 +70,3 @@ input:hover {
   padding: 32px;
   text-transform: capitalize;
 }
-#forecast {
-  text-align: center;
-  font-family: "Open Sans Condensed", sans-serif;
-  color: #ff3366;
-  margin-left: 148px;
-  padding: 13px 26px;
-}
-
-.author {
-  text-align: center;
-  display: block;
-}
