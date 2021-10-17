@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
+import "./App.css";
 
 import "./index.css";
 
-export default function App() {
+export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
@@ -13,21 +15,28 @@ export default function App() {
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      date: "Today",
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weatherData.ready) {
     return (
       <div className="App">
-        <p>{weatherData.date}</p>
-        <form id="find-city">
-          <input type="text" id="enter-city" placeholder="Enter City..." />
-          <br />
-          <input type="submit" id="search-button" value="Search" />
-          <input type="submit" id="location-button" value="Location" />
-        </form>
+        <div className="row">
+          <div className="col-6">
+            <form id="find-city">
+              <input type="text" id="enter-city" placeholder="Enter City..." />
+              <br />
+              <input type="submit" id="search-button" value="Search" />
+              <input type="submit" id="location-button" value="Location" />
+            </form>
+          </div>
+          <div className="col-6">
+            <p className="date">
+              <FormattedDate date={weatherData.date} />
+            </p>
+          </div>
+        </div>
         <div className="row justify-content-center">
           <div className="col-3">
             <div className="card">
