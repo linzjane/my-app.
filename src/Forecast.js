@@ -8,11 +8,6 @@ export default function Forecast() {
       <h2>5-Day Forecast</h2>
       <br />
       <div className="weather-forecast" id="forecast"></div>
-      <br />
-      <p className="author">
-        <a href="https://github.com/linzjane/my-app.">Open-source code </a>
-        by Lyndsey Thompson
-      </p>
     </div>
   );
 }
