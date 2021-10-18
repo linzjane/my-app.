@@ -9,12 +9,9 @@ export default function WeatherInfo(props) {
           <div className="card">
             <div className="card-body">
               <p className="card-text" id="your-city">
-                {props.data.city}
+                {props.data.city},{props.data.country}
               </p>
               <WeatherTemperature celsius={props.data.temperature} />
-              <p className="card-text" id="today-high-low">
-                -1/<strong>35</strong>
-              </p>
             </div>
           </div>
         </div>

@@ -58,7 +58,7 @@ input:hover {
   border-radius: 30px;
   background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
-#today-temperature {
+.today-temp {
   font-size: 48px;
 }
 
