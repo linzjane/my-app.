@@ -3,8 +3,8 @@ import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
 import WeatherInfo from "./Weatherinfo";
 import WeatherForecast from "./WeatherForecast";
-import "./App.css";
 
+import "./App.css";
 import "./index.css";
 
 export default function Weather(props) {
