@@ -18,13 +18,12 @@ export default function WeatherForecastDay(props) {
   }
 
   return (
-    <div>
+    <div className="justify-content-center">
       <div>{day()}</div>
       <img
         src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
         alt={`https://openweathermap.org/img/wn/${props.data.weather[0].description}@2x.png`}
       />
-
       <div>
         <strong>{maxTemperature()}</strong>/{minTemperature()}
       </div>
