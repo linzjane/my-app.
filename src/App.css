@@ -2,3 +2,7 @@
   text-align: right;
   margin-right: 80px;
 }
+.author {
+  text-align: center;
+  display: block;
+}

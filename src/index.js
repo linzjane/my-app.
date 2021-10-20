@@ -4,14 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import Forecast from "./Forecast";
-
 ReactDOM.render(
   <React.StrictMode>
     <div className="index">
       <h1>Weather</h1>
       <App />
-      <Forecast />
     </div>
   </React.StrictMode>,
   document.getElementById("root")
